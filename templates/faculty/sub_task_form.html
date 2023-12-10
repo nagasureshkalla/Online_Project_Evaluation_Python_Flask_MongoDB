@@ -1,0 +1,53 @@
+{% set title = "Sub Task" %}
+{% set curPage = "tasks" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body">
+      <form class="row g-3" action="{{request.uri}}" id="taskForm" method="post" enctype="multipart/form-data">
+
+        <div class="col-md-6">
+          <label for="sub_task_title" class="form-label">Sub Task Title</label>
+          <input type="text" class="form-control" id="sub_task_title" name="sub_task_title"
+            value="{{stask['sub_task_title']}}" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="student_id" class="form-label">Assign to</label>
+          <select name="student_id" id="student_id" class="form-control">
+            <option value="">--Select--</option>
+            {% for student in students:%}
+            <option value="{{student['_id']}}" {{'selected' if student['_id']==stask['student_id']}}>
+              {{student['firstName']}} {{student['lastName']}}
+            </option>
+            {% endfor%}
+          </select>
+        </div>
+
+        <div class="col-md-12">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description" value="{{ stask['description'] }}"
+            required>
+        </div>
+
+        <div class="col-md-6">
+          <input type="hidden1" name="project_id" value="{{project_id}}">
+          <input type="hidden1" name="sub_task_id" value="{{stask['_id']}}">
+          <input type="submit" class="btn btn-success form-control" name="" value="Save">
+        </div>
+
+        <div class="col-md-6">
+          <a href="/faculty/view-sub-tasks?pid={{project_id}}" class="btn btn-warning form-control">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

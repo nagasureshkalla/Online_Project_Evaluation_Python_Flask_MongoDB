@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "655cfa262a591014af587db3"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "firstName": "James",
+  "lastName": "Kuntz",
+  "gender": "Male",
+  "email": "fac1@gmail.com",
+  "phoneNumber": "708-266-111",
+  "address": "2662 Little Acres Lane, Kansas, Illinois(IL), 61933",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "655cfdc04639227a5cb672b4"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "firstName": "Wilhelmina ",
+  "lastName": "Sanchez",
+  "gender": "Female",
+  "email": "fac2@gmail.com",
+  "phoneNumber": "734-787-8818",
+  "address": "173 Eagle Drive, Belleville, Michigan(MI), 48111",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6563ec644719c9552d892dd1"
+  },
+  "department_id": {
+    "$oid": "655cecda1ecb3cbbcf61a81d"
+  },
+  "firstName": "Carmelita J ",
+  "lastName": "Briones",
+  "gender": "Female",
+  "email": "fac3@gmail.com",
+  "phoneNumber": "910-787-5890",
+  "address": "734 Armory Road, Jacksonville, North Carolina(NC), 28540",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "656f3b21353a7581aa8f38dd"
+  },
+  "department_id": {
+    "$oid": "656f3afa353a7581aa8f38dc"
+  },
+  "firstName": "Test Fac",
+  "lastName": "Fac",
+  "gender": "Male",
+  "email": "testfac@gmail.com",
+  "phoneNumber": "7894561236",
+  "address": "test fac address",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "656f3dc743671a38b6f62d82"
+  },
+  "department_id": {
+    "$oid": "656f3afa353a7581aa8f38dc"
+  },
+  "firstName": "Test fac",
+  "lastName": "Fac 2",
+  "gender": "Male",
+  "email": "testfac2@gmail.com",
+  "phoneNumber": "9517536245",
+  "address": "test fac 2 address",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "657242b94fdc7c1d6f996451"
+  },
+  "department_id": {
+    "$oid": "657242864fdc7c1d6f996450"
+  },
+  "firstName": "Firstname",
+  "lastName": "lastname",
+  "gender": "Male",
+  "email": "maikl@gmail.com",
+  "phoneNumber": "8765456789",
+  "address": "sample address",
+  "password": "1234",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6572be510ad6b0af355fc274"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "firstName": "fac first",
+  "lastName": "last",
+  "gender": "Male",
+  "email": "faculty@gmail.com",
+  "phoneNumber": "9874564321",
+  "address": "adress",
+  "password": "1234",
+  "status": true,
+  "ispasschanged": true
+},
+{
+  "_id": {
+    "$oid": "65732239dac99a58790965e9"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "firstName": "Naga",
+  "lastName": "Suresh",
+  "gender": "Male",
+  "email": "suresh@gmail.com",
+  "phoneNumber": "9876543219",
+  "address": "adddresss",
+  "password": "0987",
+  "education": "Phd",
+  "experience": "3",
+  "status": true,
+  "ispasschanged": true
+}]

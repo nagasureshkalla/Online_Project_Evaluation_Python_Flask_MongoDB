@@ -1,0 +1,204 @@
+[{
+  "_id": {
+    "$oid": "6564bc5ee3fdcee5eb1065ed"
+  },
+  "batchName": "CS202301",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "655cfdc04639227a5cb672b4"
+  },
+  "student_ids": [
+    {
+      "$oid": "655d03192f58272ba957eeca"
+    },
+    {
+      "$oid": "656154bb50e74c87c30dbe83"
+    }
+  ],
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6564bc7ce3fdcee5eb1065ee"
+  },
+  "batchName": "CS202302",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "655cfa262a591014af587db3"
+  },
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true,
+  "student_ids": [
+    {
+      "$oid": "65614d7541836cf7f74571ca"
+    },
+    {
+      "$oid": "65614dcc41836cf7f74571cb"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656f3e5f43671a38b6f62d85"
+  },
+  "batchName": "TEST202301",
+  "department_id": {
+    "$oid": "656f3afa353a7581aa8f38dc"
+  },
+  "faculty_id": {
+    "$oid": "656f3dc743671a38b6f62d82"
+  },
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true,
+  "student_ids": [
+    {
+      "$oid": "656f3df943671a38b6f62d83"
+    },
+    {
+      "$oid": "656f3e2643671a38b6f62d84"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6571e27344e86e04bb1dcc10"
+  },
+  "batchName": "Sample",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "655cfa262a591014af587db3"
+  },
+  "student_ids": [
+    {
+      "$oid": "65614d7541836cf7f74571ca"
+    },
+    {
+      "$oid": "65614dcc41836cf7f74571cb"
+    }
+  ],
+  "isProjectTitleApproved": false,
+  "isProjectCompleted": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "batchName": "Sample Batch 5",
+  "department_id": {
+    "$oid": "657242864fdc7c1d6f996450"
+  },
+  "faculty_id": {
+    "$oid": "657242b94fdc7c1d6f996451"
+  },
+  "student_ids": [
+    {
+      "$oid": "657242fc4fdc7c1d6f996452"
+    }
+  ],
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6572ede60ad6b0af355fc275"
+  },
+  "batchName": "TEST",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "6572be510ad6b0af355fc274"
+  },
+  "student_ids": [
+    {
+      "$oid": "655d03192f58272ba957eeca"
+    },
+    {
+      "$oid": "656154bb50e74c87c30dbe83"
+    },
+    {
+      "$oid": "6572ba0b2e133968cc45a10d"
+    }
+  ],
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6572f6ff3a6c2f5fe845b7f7"
+  },
+  "batchName": "Last Batch",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "6572be510ad6b0af355fc274"
+  },
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true,
+  "student_ids": [
+    {
+      "$oid": "6572ba0b2e133968cc45a10d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657326f4ad157e8fe3f2c591"
+  },
+  "batchName": "Regular",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "65732239dac99a58790965e9"
+  },
+  "student_ids": [
+    {
+      "$oid": "6572ba0b2e133968cc45a10d"
+    },
+    {
+      "$oid": "657325d7ad157e8fe3f2c590"
+    }
+  ],
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "65732fe2fb09c93e6bb09ccf"
+  },
+  "batchName": "SAmple 44",
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "faculty_id": {
+    "$oid": "65732239dac99a58790965e9"
+  },
+  "student_ids": [
+    {
+      "$oid": "6572ba0b2e133968cc45a10d"
+    },
+    {
+      "$oid": "65732f9dfb09c93e6bb09cce"
+    }
+  ],
+  "isProjectTitleApproved": true,
+  "isProjectCompleted": true,
+  "status": true
+}]

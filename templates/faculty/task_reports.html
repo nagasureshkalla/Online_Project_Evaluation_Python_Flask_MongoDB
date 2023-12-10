@@ -1,0 +1,117 @@
+{% set title = "Tasks reports" %}
+{% set curPage = "taskreports" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+    <a href="/faculty/view-tasks?pid={{project_id}}" class="btn btn-primary">Back to tasks</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Report&nbsp;Status</th>
+              <th>Uploaded&nbsp;file</th>
+              <th>Uploaded&nbsp;by</th>
+              <th>Uploaded&nbsp;On</th>
+              <th>Student&nbsp;Comments</th>
+              <th>Faculty&nbsp;Comments</th>
+              <th>Correction&nbsp;File</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for report in task_reports %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{TaskReportStatus(report['taskReportStatus']).name}}</td>
+              <td>
+                {% if report['uploadedFile'] != "" %}
+                <a href="{{url_for('static',filename='images/reports/'+report['uploadedFile'])}}" class="text-primary"
+                  target="_blank">Uploaded&nbsp;document</a>
+                {% else %}
+                No document uploaded
+                {% endif %}
+              </td>
+              <td>{{report['student']['firstName']}} {{report['student']['lastName']}}</td>
+              <td>{{report['uploadedOn']}}</td>
+              <td>{{report['studentComment']}}</td>
+              <td>{{report['facultyComment']}}</td>
+              <td>
+                {% if report['correctionFile'] != "" %}
+                <a href="{{url_for('static',filename='images/corrections/'+report['correctionFile'])}}"
+                  class="text-primary" target="_blank">Correction&nbsp;File</a>
+                {% endif %}
+              </td>
+              <td>
+                {% if report['taskReportStatus'] == TaskReportStatus.PENDING.value %}
+
+{#                <a href="/faculty/approve-task-report?report_id={{report['_id']}}&project_id={{project_id}}&task_id={{task_id}}"#}
+{#                  class="btn btn-sm btn-success w-100">Approve</a>#}
+
+                <button type="button" class="btn btn-sm btn-danger w-100" data-bs-toggle="modal"
+                  data-bs-target="#reviewModal" data-bs-report-id="{{report['_id']}}">Give Marks</button>
+
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Review Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">Error Correction</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/faculty/correction-task-report" method="post" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-12">
+
+              <input type="hidden" class="form-control" id="correctionFile" name="correctionFile"><br>
+
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <label for="" class="form-label">Comments</label>
+              <textarea class="form-control" name="facultyComment" id="facultyComment" rows="5" required></textarea>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <input type="hidden" id="report_id" name="report_id" value="">
+              <input type="hidden" id="task_id" name="task_id" value="{{task_id}}">
+              <input type="hidden" id="project_id" name="project_id" value="{{project_id}}">
+                <label for="correctionFile" class="form-label">Allocated Marks</label><input type="number" id="allocatedMarks" name="allocatedMarks" required>
+             <label for="correctionFile" class="form-label">Marks</label><input type="number" id="updatedMarks" name="updatedMarks" required>
+
+                <input type="submit" class="btn btn-success form-control" name="corrections" value="Submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

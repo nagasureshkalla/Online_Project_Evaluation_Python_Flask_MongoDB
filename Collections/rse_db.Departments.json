@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "name": "Computer Science",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "655cecda1ecb3cbbcf61a81d"
+  },
+  "name": "Mechanical Engineering",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "655cece51ecb3cbbcf61a81e"
+  },
+  "name": "Civil Engineering",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "656f3afa353a7581aa8f38dc"
+  },
+  "name": "Test dept",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "657242864fdc7c1d6f996450"
+  },
+  "name": "Sample Department",
+  "status": true
+}]

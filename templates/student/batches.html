@@ -1,0 +1,59 @@
+{% set title = "Batches" %}
+{% set curPage = "batches" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Batch&nbsp;Name</th>
+              <th>Department</th>
+              <th>Faculty</th>
+              <th>Students</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for batch in batches %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{batch['batchName']}}</td>
+              <td>{{batch['department']['name']}}</td>
+              <td>{{batch['faculty']['firstName']}}&nbsp;{{batch['faculty']['lastName']}}</td>
+              <td>
+                <a href="/faculty/view-batch-students?bid={{batch['_id']}}" title="view students in this batch"
+                  class="badge rounded-pill bg-info p-2">
+                  {{batch['student_ids'] | length}} Students
+                </a>
+              </td>
+              <td>
+                <a href="/student/project-titles?bid={{batch['_id']}}" title="view this batch project"
+                  class="badge rounded-pill bg-success p-2">
+                  Project Titles
+                </a>
+
+                {% if batch['isProjectTitleApproved'] %}
+                <a href="/student/view-project?bid={{batch['_id']}}" title="view this batch project"
+                  class="badge rounded-pill bg-primary p-2">
+                  View Project
+                </a>
+                {% endif %}
+
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

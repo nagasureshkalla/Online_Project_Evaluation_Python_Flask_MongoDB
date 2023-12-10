@@ -1,0 +1,43 @@
+{% set title = "Dashboard" %}
+{% set curPage = "adminHome" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="row text-center">
+
+        <div class="col-md-4">
+          <div class="text-light bg-warning p-3 shadow">
+            <h4><i class="fa-solid fa-users"></i></h4>
+            <h5>Created Batches</h5>
+            <h5>{{dashboard['batches']}}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="text-light bg-success p-3 shadow">
+            <h4><i class="fa-regular fa-square-check"></i></h4>
+            <h5>Started Projects</h5>
+            <h5>{{dashboard['started_projects']}}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="text-light bg-danger p-3 shadow">
+            <h4><i class="fa-solid fa-circle-xmark"></i></h4>
+            <h5>Completed Projects</h5>
+            <h5>{{dashboard['completed_projects']}}</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

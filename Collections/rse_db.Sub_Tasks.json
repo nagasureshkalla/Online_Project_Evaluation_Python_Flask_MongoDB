@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "657220df16ad2ff8116e6f52"
+  },
+  "project_id": {
+    "$oid": "6571e4b244e86e04bb1dcc12"
+  },
+  "student_id": {
+    "$oid": "655d03192f58272ba957eeca"
+  },
+  "faculty_id": {
+    "$oid": "655cfdc04639227a5cb672b4"
+  },
+  "sub_task_title": "Code",
+  "description": "Code",
+  "status": 2
+},
+{
+  "_id": {
+    "$oid": "65724e9177382d3b0dd4168f"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "student_id": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "faculty_id": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "sub_task_title": "Sample Task",
+  "description": "SAmple",
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "657303112288ec222f2c32c4"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "student_id": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "faculty_id": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "sub_task_title": "Sub Task",
+  "description": "Nothing",
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6573034d866d6d99c6a54334"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "student_id": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "faculty_id": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "sub_task_title": "Sub Task",
+  "description": "Nothing",
+  "status": 1,
+  "allocatedMarks": "25",
+  "updatedMarks": "20"
+},
+{
+  "_id": {
+    "$oid": "65732abc439cf265fe4fe6cb"
+  },
+  "project_id": {
+    "$oid": "65732771ad157e8fe3f2c594"
+  },
+  "student_id": {
+    "$oid": "657325d7ad157e8fe3f2c590"
+  },
+  "faculty_id": {
+    "$oid": "657325d7ad157e8fe3f2c590"
+  },
+  "sub_task_title": "Suresh Sub Task",
+  "description": "Description of the entire project",
+  "status": 2,
+  "allocatedMarks": "25",
+  "updatedMarks": "20"
+},
+{
+  "_id": {
+    "$oid": "657330bafb09c93e6bb09cd4"
+  },
+  "project_id": {
+    "$oid": "65733022fb09c93e6bb09cd1"
+  },
+  "student_id": {
+    "$oid": "65732f9dfb09c93e6bb09cce"
+  },
+  "faculty_id": {
+    "$oid": "65732f9dfb09c93e6bb09cce"
+  },
+  "sub_task_title": "Sub Task",
+  "description": "Description of the entire project",
+  "status": 2,
+  "allocatedMarks": "25",
+  "updatedMarks": "20"
+}]

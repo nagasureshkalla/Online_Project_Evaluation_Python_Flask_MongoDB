@@ -1,0 +1,55 @@
+{% set title = "Project" %}
+{% set curPage = "project" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <form class="row g-3" action="{{request.url}}" id="projectForm" method="post">
+        <div class="col-md-6">
+          <label for="" class="form-label">Project title</label>
+          <input type="text" class="form-control-plaintext" value="{{project['projectTitle']}}">
+        </div>
+
+        <div class="col-md-6">
+          <label for="" class="form-label">Batch</label>
+          <input type="text" class="form-control-plaintext" value="{{batch['batchName']}}">
+        </div>
+
+        <div class="col-md-4">
+          <label for="startDate" class="form-label required">Expected Start Date</label>
+          <input type="date" class="form-control" min="{{minDate}}" id="startDate" name="startDate"
+            value="{{project['startDate']}}" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="endDate" class="form-label required">Expected End Date</label>
+          <input type="date" class="form-control" min="{{minDate}}" id="endDate" name="endDate"
+            value="{{project['endDate']}}" required>
+        </div>
+
+        <div class="col-md-4" hidden="hidden">
+          <label for="budget" class="form-label">Budget</label>
+          <input type="number" step="0.01" class="form-control" min="1" id="budget" name="budget"
+            value="{{project['budget']}}">
+        </div>
+
+        <div class="col-md-12">
+          <label for="remarks" class="form-label">Remarks (any)</label>
+          <input type="text" class="form-control" id="remarks" name="remarks" value="{{project['remarks']}}">
+        </div>
+
+        <div class="col-md-4">
+          <input type="hidden" name="projectId" value="{{project['_id']}}">
+          <input type="hidden" name="batchId" value="{{project['batch_id']}}">
+          <input type="submit" class="btn btn-success" value="UPDATE">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

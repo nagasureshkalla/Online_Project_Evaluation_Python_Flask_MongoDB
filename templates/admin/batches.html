@@ -1,0 +1,61 @@
+{% set title = "Batches" %}
+{% set curPage = "batches" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Batch&nbsp;Name</th>
+              <th>Department</th>
+              <th>Faculty</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for batch in batches %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{batch['batchName']}}</td>
+              <td>{{batch['department']['name']}}</td>
+              <td>{{batch['faculty']['firstName']}}&nbsp;{{batch['faculty']['lastName']}}</td>
+              <td>
+                <a href="/admin/view-batch-students?bid={{batch['_id']}}" title="view students in this batch"
+                  class="badge rounded-pill bg-info p-2">
+                  {{batch['student_ids'] | length}} Students
+                </a>
+                <a href="/admin/batch/edit?bid={{batch['_id']}}" title="Edit batch"
+                  class="badge rounded-pill bg-primary p-2"> Edit&nbsp;Batch
+                </a>
+                {% if batch['isProjectTitleApproved'] %}
+                <a href="/admin/view-project?bid={{batch['_id']}}" title="view this batch project"
+                  class="badge rounded-pill bg-warning p-2">
+                  View Project
+                </a>
+                {% endif %}
+
+                {% if batch['student_ids'] | length == 0 %}
+                <a href="/admin/batch/delete?bid={{batch['_id']}}"
+                  onclick="return confirm('Are you sure to delete this batch?')" title="Delete this batch"
+                  class="badge rounded-pill bg-danger p-2">
+                  Delete Batch
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

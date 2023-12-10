@@ -1,0 +1,104 @@
+{% set title = 'Add Student' if not student['_id'] else 'Update Student' %}
+{% set curPage = "students" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <form class="g-3" action="{{request.url}}" id="studentForm" method="post">
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="regNo" class="form-label">Registration Number</label>
+            <input type="text" class="form-control" id="regNo" name="regNo" value="{{student['regNo']}}" readonly>
+          </div>
+
+          <div class="col-md-6">
+            <label for="department_id" class="form-label">Select Department</label>
+            <select name="department_id" id="department_id" class="form-select" required>
+              <option value="">--Select--</option>
+              {% for department in departments:%}
+              <option value="{{department['_id']}}" {{'selected' if department['_id']==student['department_id']}}>
+                {{department['name']}}
+              </option>
+              {% endfor%}
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-1">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" value="{{student['firstName']}}"
+              required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" value="{{student['lastName']}}"
+              required>
+          </div>
+
+          <div class="col-md-12">
+            <label for="gender" class="form-label">Gender</label><br>
+            {% for gender in genders %}
+            {% set checked = ""%}
+            {% if student['gender'] == gender%}
+            {% set checked = "checked" %}
+            {% endif %}
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="gender" id="{{gender}}" value="{{gender}}" {{checked}}>
+              <label class="form-check-label" for="{{gender}}">
+                {{gender}}
+              </label>
+            </div>
+
+            {% endfor %}
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{student['email']}}" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Phone number</label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+              value="{{student['phoneNumber']}}" required>
+          </div>
+
+          <div class="col-md-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address" value="{{student['address']}}" required>
+          </div>
+
+         <div class="col-md-12">
+            <label for="major" class="form-label">Major/Level</label>
+            <input type="text" class="form-control" id="major" name="major" value="{{student['major']}}" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" value="{{student['password']}}"
+              required>
+          </div>
+        </div>
+
+        <div class="row  g-3 mt-1">
+          <div class="col-md-6">
+            <input type="hidden" name="student_id" value="{{student['_id']}}">
+            <input type="submit" class="btn btn-success form-control" value="Save student">
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

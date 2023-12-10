@@ -1,0 +1,53 @@
+{% set title = "Project titles" %}
+{% set curPage = "projectTitles" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow mt-4">
+    <div class="card-body">
+
+      <h5>Titles Suggested by {{batch['batchName']}} students</h5>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped border" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Project Title</th>
+                <th>Description</th>
+                <th>Budget</th>
+              <th>Status</th>
+              <th>Remarks</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for title in titles %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{title['projectTitle']}}</td>
+                <td>{{title['projectDesciption']}}</td>
+            <td>{{title['projectBudget']}}</td>
+              <td>{{TitleStatus(title['status']).name}}</td>
+              <td>{{title['rejectionRemarks']}}</td>
+              <td>
+                {% if TitleStatus.PENDING.value == title['status'] %}
+                <a href="/faculty/title-approve?bid={{batch['_id']}}&tid={{title['_id']}}"
+                  class="btn btn-sm btn-success">APPROVE</a>
+                <a href="/faculty/title-reject?bid={{batch['_id']}}&tid={{title['_id']}}"
+                  class="btn btn-sm btn-danger">REJECT</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

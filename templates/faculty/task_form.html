@@ -1,0 +1,84 @@
+{% set title = "Tasks" %}
+{% set curPage = "tasks" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body">
+      <form class="row g-3" action="{{request.uri}}" id="taskForm" method="post" enctype="multipart/form-data">
+
+        <div class="col-md-12">
+          <label for="taskTitle" class="form-label">Task Title</label>
+          <input type="text" class="form-control" id="taskTitle" name="taskTitle" value="{{ task['taskTitle'] }}"
+            required>
+        </div>
+
+        <div class="col-md-12">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description" value="{{ task['description'] }}"
+            required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="deliverableContent" class="form-label">Deliverable Content</label>
+          <input type="text" class="form-control" id="deliverableContent" name="deliverableContent"
+            value="{{ task['deliverableContent'] }}" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" class="form-control" min="{{minDate}}" id="startDate" name="startDate"
+            value="{{ task['startDate'] }}" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="dueDate" class="form-label">Due Date</label>
+          <input type="date" class="form-control" min="{{minDate}}" id="dueDate" name="dueDate"
+            value="{{ task['dueDate'] }}" required>
+        </div>
+
+        <div class="col-md-3" hidden="hidden">
+          <label for="allotedMarks" class="form-label">Alloted Marks</label>
+          <input type="text" class="form-control" id="allotedMarks" name="allotedMarks"
+            value="{{ task['allotedMarks'] }}" >
+        </div>
+
+
+        <div class="col-md-12">
+          <label for="sampleAttachment" class="form-label">Sample File (if any)</label>
+          <input type="file" class="form-control" id="sampleAttachment" name="sampleAttachment"
+            value="{{ task['sampleAttachment'] }}">
+          {% if task['sampleAttachment'] %}
+          <a href="{{url_for('static',filename='images/sample/'+task['sampleAttachment'])}}" class="text-primary"
+            target="_blank">View&nbsp;Sample&nbsp;document</a>
+          {% endif %}
+          <input type="hidden" name="oldFile" value="{{ task['sampleAttachment'] }}">
+        </div>
+
+
+        <div class="col-md-12">
+          <label for="note" class="form-label">Note</label>
+          <input type="text" class="form-control" id="note" name="note" value="{{ task['note'] }}" required>
+        </div>
+
+        <div class="col-md-6">
+          <input type="hidden" name="project_id" value="{{project['_id']}}">
+          <input type="hidden" name="batch_id" value="{{project['batch_id']}}">
+          <input type="hidden" name="task_id" value="{{task['_id']}}">
+          <input type="submit" class="btn btn-success form-control" name="" value="Save">
+        </div>
+
+        <div class="col-md-6">
+          <a href="/student/view-tasks?pid={{project['_id']}}" class="btn btn-warning form-control">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

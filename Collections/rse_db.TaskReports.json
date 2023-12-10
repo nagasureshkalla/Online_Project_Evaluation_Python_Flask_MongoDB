@@ -1,0 +1,360 @@
+[{
+  "_id": {
+    "$oid": "6566dca734be61d028fc0bd9"
+  },
+  "task_id": {
+    "$oid": "65668424eae208572f2c0de8"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "uploadedFile": "Student_Proposal_Content.docx",
+  "uploadedBy": {
+    "$oid": "65614d7541836cf7f74571ca"
+  },
+  "uploadedOn": "2023-11-29",
+  "studentComment": "Student proposal content",
+  "facultyComment": "Faculty Correction Comment",
+  "correctionFile": "BaggageTag.pdf",
+  "taskReportStatus": 2
+},
+{
+  "_id": {
+    "$oid": "6566e29db7142e9358a2b4d8"
+  },
+  "task_id": {
+    "$oid": "65668424eae208572f2c0de8"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "uploadedFile": "stud-corrected-proposal.docx",
+  "uploadedBy": {
+    "$oid": "65614d7541836cf7f74571ca"
+  },
+  "uploadedOn": "2023-11-29",
+  "studentComment": "Student Corrected Proposal",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "65670664fba69569aaddf85f"
+  },
+  "task_id": {
+    "$oid": "6566bf63be2989c9235ec7c7"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "uploadedFile": "stud-db-description.docx",
+  "uploadedBy": {
+    "$oid": "65614dcc41836cf7f74571cb"
+  },
+  "uploadedOn": "2023-11-29",
+  "studentComment": "Database Description",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "656706e9fba69569aaddf860"
+  },
+  "task_id": {
+    "$oid": "656703cd83265d87d074d7c5"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "uploadedFile": "proposal-correction-file.docx",
+  "uploadedBy": {
+    "$oid": "65614dcc41836cf7f74571cb"
+  },
+  "uploadedOn": "2023-11-29",
+  "studentComment": "Source Code attached",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "656f511bcf0feb6aa624f590"
+  },
+  "task_id": {
+    "$oid": "656f50e3cf0feb6aa624f58f"
+  },
+  "project_id": {
+    "$oid": "656f5024615de88673d59c37"
+  },
+  "uploadedFile": "test word 2.docx",
+  "uploadedBy": {
+    "$oid": "656f3e2643671a38b6f62d84"
+  },
+  "uploadedOn": "2023-12-05",
+  "studentComment": "Project Description",
+  "facultyComment": "Correction given by faculty",
+  "correctionFile": "",
+  "taskReportStatus": 2
+},
+{
+  "_id": {
+    "$oid": "656f5174cf0feb6aa624f591"
+  },
+  "task_id": {
+    "$oid": "656f50e3cf0feb6aa624f58f"
+  },
+  "project_id": {
+    "$oid": "656f5024615de88673d59c37"
+  },
+  "uploadedFile": "test word 2.docx",
+  "uploadedBy": {
+    "$oid": "656f3e2643671a38b6f62d84"
+  },
+  "uploadedOn": "2023-12-05",
+  "studentComment": "Updated Project Description",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "656f521bcf0feb6aa624f593"
+  },
+  "task_id": {
+    "$oid": "656f51f2cf0feb6aa624f592"
+  },
+  "project_id": {
+    "$oid": "656f5024615de88673d59c37"
+  },
+  "uploadedFile": "test word 3.docx",
+  "uploadedBy": {
+    "$oid": "656f3e2643671a38b6f62d84"
+  },
+  "uploadedOn": "2023-12-05",
+  "studentComment": "Database Description",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "6571e5d144e86e04bb1dcc14"
+  },
+  "task_id": {
+    "$oid": "6571e59e44e86e04bb1dcc13"
+  },
+  "project_id": {
+    "$oid": "6571e4b244e86e04bb1dcc12"
+  },
+  "uploadedFile": "CS5600DESIGN_12010_GROUP5.pdf",
+  "uploadedBy": {
+    "$oid": "655d03192f58272ba957eeca"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "657246874fdc7c1d6f996458"
+  },
+  "task_id": {
+    "$oid": "657245c44fdc7c1d6f996456"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "Project",
+  "facultyComment": "There is error",
+  "correctionFile": "",
+  "taskReportStatus": 2
+},
+{
+  "_id": {
+    "$oid": "657248454fdc7c1d6f996459"
+  },
+  "task_id": {
+    "$oid": "6572464d4fdc7c1d6f996457"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "no error",
+  "correctionFile": "",
+  "taskReportStatus": 2
+},
+{
+  "_id": {
+    "$oid": "65724bd94fdc7c1d6f99645b"
+  },
+  "task_id": {
+    "$oid": "65724bb94fdc7c1d6f99645a"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "CS5600_WrittenAssignment3.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "6572588deced9747991e4e11"
+  },
+  "task_id": {
+    "$oid": "65725878eced9747991e4e10"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "CS5600_WrittenAssignment3.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "65725a9beced9747991e4e12"
+  },
+  "task_id": {
+    "$oid": "657257ca0982cd183802565c"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "CS5600_WrittenAssignment3.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "65725cbd1c70dd1173a4749a"
+  },
+  "task_id": {
+    "$oid": "65725cae1c70dd1173a47499"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "uploadedFile": "CS5600_WrittenAssignment3.docx",
+  "uploadedBy": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "uploadedOn": "2023-12-07",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 1
+},
+{
+  "_id": {
+    "$oid": "6572fa315c1dd2a56b57c205"
+  },
+  "task_id": {
+    "$oid": "6572fa1a5c1dd2a56b57c204"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "uploadedOn": "2023-12-08",
+  "studentComment": "",
+  "facultyComment": "",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "6572ff12dd718919223230d1"
+  },
+  "task_id": {
+    "$oid": "6572ff08dd718919223230d0"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "uploadedOn": "2023-12-08",
+  "studentComment": "",
+  "facultyComment": "Nothing",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "657327d9ad157e8fe3f2c596"
+  },
+  "task_id": {
+    "$oid": "657327cdad157e8fe3f2c595"
+  },
+  "project_id": {
+    "$oid": "65732771ad157e8fe3f2c594"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "657325d7ad157e8fe3f2c590"
+  },
+  "uploadedOn": "2023-12-08",
+  "studentComment": "",
+  "facultyComment": "it is good",
+  "correctionFile": "",
+  "taskReportStatus": 3
+},
+{
+  "_id": {
+    "$oid": "65733073fb09c93e6bb09cd3"
+  },
+  "task_id": {
+    "$oid": "6573306bfb09c93e6bb09cd2"
+  },
+  "project_id": {
+    "$oid": "65733022fb09c93e6bb09cd1"
+  },
+  "uploadedFile": "Schedule_CS5600_Fall2023.docx",
+  "uploadedBy": {
+    "$oid": "65732f9dfb09c93e6bb09cce"
+  },
+  "uploadedOn": "2023-12-08",
+  "studentComment": "",
+  "facultyComment": "some",
+  "correctionFile": "",
+  "taskReportStatus": 3
+}]

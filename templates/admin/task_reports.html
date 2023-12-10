@@ -1,0 +1,58 @@
+{% set title = "Tasks reports" %}
+{% set curPage = "taskreports" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+    <a href="/admin/view-tasks?pid={{project_id}}" class="btn btn-primary">Back to tasks</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Report&nbsp;Status</th>
+              <th>Uploaded&nbsp;file</th>
+              <th>Uploaded&nbsp;by</th>
+              <th>Uploaded&nbsp;On</th>
+              <th>Student&nbsp;Comments</th>
+              <th>Faculty&nbsp;Comments</th>
+              <th>Correction&nbsp;File</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for report in task_reports %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{TaskReportStatus(report['taskReportStatus']).name}}</td>
+              <td>
+                <a href="{{url_for('static',filename='images/reports/'+report['uploadedFile'])}}" class="text-primary"
+                  target="_blank">Uploaded&nbsp;document</a>
+              </td>
+              <td>{{report['student']['firstName']}} {{report['student']['lastName']}}</td>
+              <td>{{report['uploadedOn']}}</td>
+              <td>{{report['studentComment']}}</td>
+              <td>{{report['facultyComment']}}</td>
+              <td>
+                {% if report['correctionFile'] != "" %}
+                <a href="{{url_for('static',filename='images/corrections/'+report['correctionFile'])}}"
+                  class="text-primary" target="_blank">Correction&nbsp;File</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+< {% endblock %}

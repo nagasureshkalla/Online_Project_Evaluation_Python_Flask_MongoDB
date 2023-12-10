@@ -1,0 +1,95 @@
+{% set title = "Sub tasks" %}
+{% set curPage = "taskreports" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+
+      <div class="d-flex justify-content-between mb-2">
+        <a href="/faculty/view-sub-tasks?pid={{project_id}}" class="btn btn-sm btn-info">
+          <- Back to tasks</a>
+{#            <a href="/faculty/add-sub-task?pid={{project_id}}" class="btn btn-sm btn-primary">+ Add Sub task</a>#}
+      </div>
+
+
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Assigned&nbsp;To</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in sub_tasks %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{item['student']['firstName']}} {{item['student']['lastName']}}</td>
+              <td>{{item['sub_task_title']}}</td>
+              <td>{{item['description']}}</td>
+              <td>{{SubTaskStatus(item['status']).name}}</td>
+              <td>
+                <a href="/faculty/view-sub-task-reports?stid={{item['_id']}}" class="btn btn-sm btn-primary">Reports</a>
+              </td>
+            </tr>
+            {% endfor%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Review Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">Error Correction</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/faculty/correction-task-report" method="post" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-12">
+              <label for="correctionFile" class="form-label">Correction File</label>
+              <input type="file" class="form-control" id="correctionFile" name="correctionFile">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <label for="" class="form-label">Comments</label>
+              <textarea class="form-control" name="facultyComment" id="facultyComment" rows="5" required></textarea>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <input type="hidden" id="report_id" name="report_id" value="">
+              <input type="hidden" id="task_id" name="task_id" value="{{task_id}}">
+              <input type="hidden" id="project_id" name="project_id" value="{{project_id}}">
+              <input type="submit" class="btn btn-success form-control" name="corrections" value="Submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

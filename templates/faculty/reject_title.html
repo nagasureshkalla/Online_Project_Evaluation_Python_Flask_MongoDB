@@ -1,0 +1,32 @@
+{% set title = "Reject Project titles" %}
+{% set curPage = "projectTitles" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow mt-4">
+    <div class="card-body">
+      <a href="/faculty/project-titles?bid={{batchId}}" class="btn btn-sm btn-warning mb-2">Back</a>
+
+      <h5 class="text-center mb-2">Reject Title : {{ptitle['projectTitle']}}</h5>
+
+      <form action="{{request.url}}" id="titleRejectionForm" method="POST">
+
+        <div class="mb-3">
+          <label for="rejectionRemarks" class="col-sm-2 col-form-label">Rejection remarks</label>
+          <textarea name="rejectionRemarks" id="rejectionRemarks" class="form-control"></textarea>
+        </div>
+
+        <input type="hidden" name="batchId" value="{{batchId}}">
+        <input type="hidden" name="titleId" value="{{ptitle['_id']}}">
+        <button type="submit" class="btn btn-danger">Reject Title</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

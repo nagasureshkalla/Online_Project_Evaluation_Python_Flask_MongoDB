@@ -1,0 +1,140 @@
+{% set title = "Tasks" %}
+{% set curPage = "tasks" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center px-3">
+    <a href="/student/view-project?bid={{project['batch_id']}}" class="btn btn-primary">Back to project details</a>
+
+{#      {% if not project['projectStatus'] == ProjectStatus.COMPLETED.value %}#}
+    <a href="/faculty/task-add?pid={{project['_id']}}" class="btn btn-success">Add New Task</a>
+{#    {% endif %}#}
+  </div>
+
+  <div class="p-3 mt-3">
+    <!-- {{tasks}} -->
+    {% if tasks != "" %}
+    {% for task in tasks %}
+    <div class="card mb-5 shadow">
+      <div class="card-header d-flex justify-content-between">
+        <h5>
+          Task - {{loop.index}} : {{task['taskTitle']}} (<em>{{TaskStatus(task['taskStatus']).name}}</em>)
+        </h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>Description</th>
+            <td colspan="3">
+              {{task['description']}}
+            </td>
+          </tr>
+          <tr>
+            <th>Start date</th>
+            <td>{{task['startDate']}}</td>
+            <th>Due date</th>
+            <td>{{task['dueDate']}}</td>
+          </tr>
+
+          <tr>
+            <th>Deliverable contents</th>
+            <td>{{task['deliverableContent']}}</td>
+            <th>Sample attachment</th>
+            <td>
+              {% if task['sampleAttachment'] != "" %}
+              <a href="{{url_for('static',filename='images/sample/'+task['sampleAttachment'])}}" class="text-primary"
+                target="_blank">Sample&nbsp;document</a>
+              {% else %}
+              No Attachment
+              {% endif %}
+            </td>
+          </tr>
+
+          <tr>
+            <th>Alloted Marks</th>
+            <td>{{task['allotedMarks']}}</td>
+            <th>Obtained Marks</th>
+            <td>{{task['obtainedMarks']}}</td>
+          </tr>
+
+          <tr>
+            <th>Note</th>
+            <td>{{task['note']}}</td>
+            <th>task Status</th>
+            <td>{{TaskStatus(task['taskStatus']).name}}</td>
+          </tr>
+
+{#          <tr>#}
+{#            <th>Completion comments by faculty</th>#}
+{#              <td>{{task['facultyComment']}}</td>#}
+{#            #}
+{#          </tr>#}
+
+        </table>
+      </div>
+      <div class="card-footer">
+
+        {% if task['taskStatus'] == 1 %}
+        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal"
+          data-bs-task-id="{{task['_id']}}" data-bs-project-id="{{task['project_id']}}">Upload document</button>
+        {% endif %}
+
+        <a href="/student/view-task-reports?task_id={{task['_id']}}&project_id={{task['project_id']}}"
+          class="btn btn-sm btn-warning">View Task Reports</a>
+
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <h4 class="text-danger text-center mt-5">Sorry, no task available</h4>
+    {% endif %}
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="uploadModalLabel">Upload Document</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="" action="/student/upload-task-report" method="post" enctype="multipart/form-data">
+          <div class="row">
+
+            <div class="col-md-12">
+              <label for="uploadedFile" class="form-label">Document</label>
+              <input type="file" class="form-control" id="uploadedFile" name="uploadedFile">
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <label for="studentComment" class="form-label">Comments</label>
+              <textarea class="form-control" name="studentComment" id="studentComment" rows="5"></textarea>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <input type="hidden" id="task_id" name="task_id" value="">
+              <input type="hidden" id="project_id" name="project_id" value="">
+              <input type="submit" class="btn btn-success form-control" name="upload" value="Upload">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

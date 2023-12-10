@@ -1,0 +1,41 @@
+{% set title = "Sub Task Report Correction" %}
+{% set curPage = "subTaskReport" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body">
+
+      <form action="{{request.url}}" method="post" enctype="multipart/form-data" class="w-50">
+        <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="facultyComment" class="form-label">Comments</label>
+            <textarea class="form-control" name="facultyComment" id="facultyComment" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <input type="hidden" id="sub_task_report_id" name="sub_task_report_id" value="{{sub_task_report_id}}">
+            <input type="hidden" id="sub_task_id" name="sub_task_id" value="{{sub_task_id}}">
+
+              Total Marks : <input type="number" id="sub_task_allocatedMarks" name="sub_task_allocatedMarks" value="">
+
+
+              Given Marks : <input type="number" id="sub_task_updatedMarks" name="sub_task_updatedMarks" value="">
+
+
+            <input type="submit" class="btn btn-danger form-control" name="edit_upload" value="Submit">
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

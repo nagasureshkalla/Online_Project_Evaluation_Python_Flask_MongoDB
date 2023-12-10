@@ -1,0 +1,39 @@
+{% set title = "Save Sub Task report" %}
+{% set curPage = "subTaskReport" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body">
+
+      <form action="{{request.url}}" method="post" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-md-12">
+            <label for="uploadedFile" class="form-label">Document</label>
+            <input type="file" class="form-control" id="uploadedFile" name="uploadedFile">
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="studentComment" class="form-label">Comments</label>
+            <textarea class="form-control" name="studentComment" id="studentComment" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <input type="hidden1" id="sub_task_id" name="sub_task_id" value="{{sub_task_id}}">
+            <input type="submit" class="btn btn-success form-control" name="edit_upload" value="Upload">
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

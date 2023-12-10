@@ -1,0 +1,195 @@
+[{
+  "_id": {
+    "$oid": "655d03192f58272ba957eeca"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231001,
+  "firstName": "Renee",
+  "lastName": "Bradford",
+  "gender": "Female",
+  "email": "stud1@gmail.com",
+  "phoneNumber": "901-350-6738",
+  "address": "3009 Flanigan Oaks Drive, Capitol Heights, Maryland(MD), 20027",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "65614d7541836cf7f74571ca"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231002,
+  "firstName": "Rafael",
+  "lastName": "Johnson",
+  "gender": "Male",
+  "email": "stud2@gmail.com",
+  "phoneNumber": "808-271-0018",
+  "address": "2445 Stratford Drive, Waipahu, Hawaii(HI), 96797",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": true,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "65614dcc41836cf7f74571cb"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231003,
+  "firstName": "Lisha",
+  "lastName": "Combs",
+  "gender": "Female",
+  "email": "stud3@gmail.com",
+  "phoneNumber": "724-244-1922",
+  "address": "4980 Saint James Drive, Ickesburg, Pennsylvania(PA), 17037",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": true,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "656154bb50e74c87c30dbe83"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231004,
+  "firstName": "John",
+  "lastName": "Anderson",
+  "gender": "Male",
+  "email": "stud4@gmail.com",
+  "phoneNumber": "978-985-9535",
+  "address": "4011 Levy Court, Lawrence, Massachusetts(MA), 01840",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6563eccf4719c9552d892dd2"
+  },
+  "department_id": {
+    "$oid": "655cecda1ecb3cbbcf61a81d"
+  },
+  "regNo": 20231005,
+  "firstName": "Yolanda ",
+  "lastName": "Allen",
+  "gender": "Male",
+  "email": "stud5@gmail.com",
+  "phoneNumber": "886-228-4057",
+  "address": "2407 Cherry Ridge Drive, Mount Clemens, Michigan(MI), 48044",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "656f3df943671a38b6f62d83"
+  },
+  "department_id": {
+    "$oid": "656f3afa353a7581aa8f38dc"
+  },
+  "regNo": 20231006,
+  "firstName": "Test Stud",
+  "lastName": "Stud 1",
+  "gender": "Male",
+  "email": "teststud1@gmail.com",
+  "phoneNumber": "7894561245",
+  "address": "teststud1 address",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "657242fc4fdc7c1d6f996452"
+  },
+  "department_id": {
+    "$oid": "657242864fdc7c1d6f996450"
+  },
+  "regNo": 20231007,
+  "firstName": "Studentname",
+  "lastName": "lastname",
+  "gender": "Male",
+  "email": "student@gmail.com",
+  "phoneNumber": "6568765456",
+  "address": "student address",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "6572ba0b2e133968cc45a10d"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231008,
+  "firstName": "first",
+  "lastName": "last",
+  "gender": "Male",
+  "email": "student@gmail.com",
+  "phoneNumber": "1234543222",
+  "address": "address",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true,
+  "ispasschanged": true
+},
+{
+  "_id": {
+    "$oid": "657325d7ad157e8fe3f2c590"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231009,
+  "firstName": "Naga",
+  "lastName": "Suresh",
+  "gender": "Male",
+  "email": "suresh@gmail.com",
+  "phoneNumber": "8765427635",
+  "address": "address",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true,
+  "major": "CS/Graduate",
+  "ispasschanged": true
+},
+{
+  "_id": {
+    "$oid": "65732f9dfb09c93e6bb09cce"
+  },
+  "department_id": {
+    "$oid": "655cec111ecb3cbbcf61a81c"
+  },
+  "regNo": 20231010,
+  "firstName": "suresh",
+  "lastName": "kalla",
+  "gender": "Male",
+  "email": "suresh@gmail.com",
+  "phoneNumber": "8768765434",
+  "address": "adress",
+  "password": "1234",
+  "isProjectAssigned": false,
+  "isBatchAssigned": false,
+  "status": true,
+  "major": "CS/graduate",
+  "ispasschanged": true
+}]

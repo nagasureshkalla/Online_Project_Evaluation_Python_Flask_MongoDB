@@ -1,0 +1,83 @@
+{% set title = 'Add Batch' if not batch else 'Update Batch' %}
+{% set curPage = "batches" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <form class="g-3" action="{{request.url}}" id="batchesForm" method="post">
+
+        <div class="row g-3">
+
+          <div class="col-md-4">
+            <label for="batchName" class="form-label">Batch Name</label>
+            <input type="text" class="form-control" id="batchName" name="batchName" value="{{batch['batchName']}}"
+              required>
+          </div>
+
+          <div class="col-md-4">
+            <label for="department_id" class="form-label">Department</label>
+            <select name="department_id" id="department_id" class="form-select" required>
+              <option value="">--Select--</option>
+              {% for department in departments:%}
+              <option value="{{department['_id']}}" {{'selected' if department['_id']==batch['department_id']}}>
+                {{department['name']}}
+              </option>
+              {% endfor%}
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="title" class="form-label">Faculty</label>
+            <select name="faculty_id" id="faculty_id" class="form-select" required>
+              <option value="">-- Select --</option>
+              {% if batch %}
+              {% for faculty in faculties %}
+              <option value="{{faculty['_id']}}" {{'selected' if faculty['_id']==batch['faculty_id']}}>
+                {{faculty['firstName']}} {{faculty['lastName']}}
+              </option>
+              {% endfor%}
+              {% endif %}
+            </select>
+          </div>
+
+          <div class="col-md-12">
+            <label for="title" class="form-label">Select Students</label>
+            <div id="stud_id">
+              {% for student in students %}
+
+              {% set checked = "" %}
+              {% if student['_id'] in batch['student_ids'] %}
+              {% set checked = "checked" %}
+              {% endif %}
+
+              <div class='form-check mx-5'>
+                <input class='form-check-input' type='checkbox' name='student_id' value="{{student['_id']}}"
+                  id="{{student['_id']}}" {{checked}}>
+                <label class="form-check-label" for="{{student['_id']}}">
+                  {{student['firstName']}} {{student['lastName']}} ({{student['regNo']}})
+                </label>
+              </div>
+
+              {% endfor%}
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+            <input type="hidden" name="batchId" value="{{batch['_id']}}">
+            <input type="submit" class="btn btn-success form-control" value="Save batch">
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

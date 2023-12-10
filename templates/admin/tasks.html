@@ -1,0 +1,92 @@
+{% set title = "Tasks" %}
+{% set curPage = "tasks" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center px-3">
+    <a href="/admin/view-project?bid={{project['batch_id']}}" class="btn btn-primary">Back to project details</a>
+
+  </div>
+
+  <div class="p-3 mt-3">
+    <!-- {{tasks}} -->
+    {% if tasks != "" %}
+    {% for task in tasks %}
+
+    <div class="card mb-5 shadow">
+      <div class="card-header d-flex justify-content-between">
+        <h5>
+          Task - {{loop.index}} : {{task['taskTitle']}} (<em>{{TaskStatus(task['taskStatus']).name}}</em>)
+        </h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>Description</th>
+            <td colspan="3">
+              {{task['description']}}
+            </td>
+          </tr>
+          <tr>
+            <th>Start date</th>
+            <td>{{task['startDate']}}</td>
+            <th>Due date</th>
+            <td>{{task['dueDate']}}</td>
+          </tr>
+
+          <tr>
+            <th>Deliverable contents</th>
+            <td>{{task['deliverableContent']}}</td>
+            <th>Sample attachment</th>
+            <td>
+              {% if task['sampleAttachment'] != "" %}
+              <a href="{{url_for('static',filename='images/sample/'+task['sampleAttachment'])}}" class="text-primary"
+                target="_blank">Sample&nbsp;document</a>
+              {% else %}
+              No Attachment
+              {% endif %}
+            </td>
+          </tr>
+
+          <tr>
+            <th>Alloted Marks</th>
+            <td>{{task['allotedMarks']}}</td>
+            <th>Obtained Marks</th>
+            <td>{{task['obtainedMarks']}}</td>
+          </tr>
+
+          <tr>
+            <th>Note</th>
+            <td>{{task['note']}}</td>
+            <th>task Status</th>
+            <td>{{TaskStatus(task['taskStatus']).name}}</td>
+          </tr>
+
+          <tr>
+            <th>Completion comments by faculty</th>
+            <td colspan="3">{{task['facultyComments']}}</td>
+          </tr>
+
+        </table>
+      </div>
+      <div class="card-footer">
+
+        <a href="/admin/view-task-reports?task_id={{task['_id']}}&project_id={{task['project_id']}}"
+          class="btn btn-sm btn-warning">View task reports</a>
+
+      </div>
+    </div>
+
+    {% endfor %}
+    {% else %}
+    <h4 class="text-danger text-center mt-5">Sorry, no task available</h4>
+    {% endif %}
+  </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,358 @@
+[{
+  "_id": {
+    "$oid": "65668424eae208572f2c0de8"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "batch_id": {
+    "$oid": "6564bc7ce3fdcee5eb1065ee"
+  },
+  "taskTitle": "Project Proposal",
+  "description": "Prepare a project proposal, sample file attached for reference",
+  "deliverableContent": "Project Proposal test",
+  "startDate": "2023-12-02",
+  "dueDate": "2023-12-03",
+  "allotedMarks": "25",
+  "obtainedMarks": 20,
+  "note": "Please submit the document before due date",
+  "sampleAttachment": "sample-190423142654.pdf",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": "-5 for late submission"
+},
+{
+  "_id": {
+    "$oid": "6566bf63be2989c9235ec7c7"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "batch_id": {
+    "$oid": "6564bc7ce3fdcee5eb1065ee"
+  },
+  "taskTitle": "Database Description",
+  "description": "Prepare a Database Description, sample file attached for reference",
+  "deliverableContent": "Database Description",
+  "startDate": "2023-12-05",
+  "dueDate": "2023-12-08",
+  "allotedMarks": "25",
+  "obtainedMarks": 25,
+  "note": "Please submit the document before due date",
+  "sampleAttachment": "sample-190423142654.pdf",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": ""
+},
+{
+  "_id": {
+    "$oid": "656703cd83265d87d074d7c5"
+  },
+  "project_id": {
+    "$oid": "6565c1115f83472916b617ee"
+  },
+  "batch_id": {
+    "$oid": "6564bc7ce3fdcee5eb1065ee"
+  },
+  "taskTitle": "Project Submission",
+  "description": "Zip and attach your source code",
+  "deliverableContent": "Source Code",
+  "startDate": "2023-12-09",
+  "dueDate": "2023-12-31",
+  "allotedMarks": "25",
+  "obtainedMarks": 25,
+  "note": "Please submit before the due date",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": ""
+},
+{
+  "_id": {
+    "$oid": "656f50e3cf0feb6aa624f58f"
+  },
+  "project_id": {
+    "$oid": "656f5024615de88673d59c37"
+  },
+  "batch_id": {
+    "$oid": "656f3e5f43671a38b6f62d85"
+  },
+  "taskTitle": "Project Description",
+  "description": "Submit Project description",
+  "deliverableContent": "Project Description",
+  "startDate": "2023-12-10",
+  "dueDate": "2023-12-13",
+  "allotedMarks": "25",
+  "obtainedMarks": 20,
+  "note": "Please submit before the end date",
+  "sampleAttachment": "test word 1.docx",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": "-5 for late submission"
+},
+{
+  "_id": {
+    "$oid": "656f51f2cf0feb6aa624f592"
+  },
+  "project_id": {
+    "$oid": "656f5024615de88673d59c37"
+  },
+  "batch_id": {
+    "$oid": "656f3e5f43671a38b6f62d85"
+  },
+  "taskTitle": "Database Description",
+  "description": "Please submit database description",
+  "deliverableContent": "Database Description",
+  "startDate": "2023-12-14",
+  "dueDate": "2023-12-16",
+  "allotedMarks": "25",
+  "obtainedMarks": 25,
+  "note": "Please submit before end date",
+  "sampleAttachment": "test word 2.docx",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": ""
+},
+{
+  "_id": {
+    "$oid": "6571e59e44e86e04bb1dcc13"
+  },
+  "project_id": {
+    "$oid": "6571e4b244e86e04bb1dcc12"
+  },
+  "batch_id": {
+    "$oid": "6564bc5ee3fdcee5eb1065ed"
+  },
+  "taskTitle": "Project Documentation",
+  "description": "Documentation",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-07",
+  "dueDate": "2023-12-10",
+  "allotedMarks": "25",
+  "obtainedMarks": 20,
+  "note": "Documentaion",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2,
+  "facultyComments": ""
+},
+{
+  "_id": {
+    "$oid": "657245c44fdc7c1d6f996456"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "Project Description",
+  "description": "Description",
+  "deliverableContent": "Any",
+  "startDate": "2023-12-07",
+  "dueDate": "2023-12-10",
+  "allotedMarks": "25",
+  "obtainedMarks": 0,
+  "note": "Any",
+  "sampleAttachment": "",
+  "isReportApproved": false,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "6572464d4fdc7c1d6f996457"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "Database Description",
+  "description": "Database",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-13",
+  "dueDate": "2023-12-15",
+  "allotedMarks": "20",
+  "obtainedMarks": 0,
+  "note": "Database",
+  "sampleAttachment": "",
+  "isReportApproved": false,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "65724bb94fdc7c1d6f99645a"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "sample",
+  "description": "desc",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-15",
+  "dueDate": "2023-12-21",
+  "allotedMarks": "25",
+  "obtainedMarks": 0,
+  "note": "note",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "657257ca0982cd183802565c"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "new task",
+  "description": "task",
+  "deliverableContent": "pdf",
+  "startDate": "2023-12-08",
+  "dueDate": "2023-12-21",
+  "allotedMarks": "25",
+  "obtainedMarks": 0,
+  "note": "nothing",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "65725878eced9747991e4e10"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "task",
+  "description": "sass",
+  "deliverableContent": "sa",
+  "startDate": "2023-12-07",
+  "dueDate": "2023-12-20",
+  "allotedMarks": "24",
+  "obtainedMarks": 0,
+  "note": "sad",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "65725cae1c70dd1173a47499"
+  },
+  "project_id": {
+    "$oid": "6572440c4fdc7c1d6f996455"
+  },
+  "batch_id": {
+    "$oid": "6572431d4fdc7c1d6f996453"
+  },
+  "taskTitle": "r",
+  "description": "r",
+  "deliverableContent": "r",
+  "startDate": "2023-12-21",
+  "dueDate": "2023-12-27",
+  "allotedMarks": "24",
+  "obtainedMarks": "20",
+  "note": "r",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 1
+},
+{
+  "_id": {
+    "$oid": "6572fa1a5c1dd2a56b57c204"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "batch_id": {
+    "$oid": "6572f6ff3a6c2f5fe845b7f7"
+  },
+  "taskTitle": "Project Description",
+  "description": "Description of the entire project",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-08",
+  "dueDate": "2023-12-12",
+  "allotedMarks": "25",
+  "obtainedMarks": "20",
+  "note": "Upload pdf file only",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2
+},
+{
+  "_id": {
+    "$oid": "6572ff08dd718919223230d0"
+  },
+  "project_id": {
+    "$oid": "6572f7b1cc0c58251099bd05"
+  },
+  "batch_id": {
+    "$oid": "6572f6ff3a6c2f5fe845b7f7"
+  },
+  "taskTitle": "Project Description",
+  "description": "Decription",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-14",
+  "dueDate": "2023-12-21",
+  "allotedMarks": "25",
+  "obtainedMarks": "20",
+  "note": "Upload pdf file only",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2
+},
+{
+  "_id": {
+    "$oid": "657327cdad157e8fe3f2c595"
+  },
+  "project_id": {
+    "$oid": "65732771ad157e8fe3f2c594"
+  },
+  "batch_id": {
+    "$oid": "657326f4ad157e8fe3f2c591"
+  },
+  "taskTitle": "Project Description",
+  "description": "Description of the entire project",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-09",
+  "dueDate": "2023-12-12",
+  "allotedMarks": "25",
+  "obtainedMarks": "20",
+  "note": "Upload pdf file only",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2
+},
+{
+  "_id": {
+    "$oid": "6573306bfb09c93e6bb09cd2"
+  },
+  "project_id": {
+    "$oid": "65733022fb09c93e6bb09cd1"
+  },
+  "batch_id": {
+    "$oid": "65732fe2fb09c93e6bb09ccf"
+  },
+  "taskTitle": "Project Description",
+  "description": "Description of the entire project",
+  "deliverableContent": "PDF",
+  "startDate": "2023-12-08",
+  "dueDate": "2023-12-13",
+  "allotedMarks": "25",
+  "obtainedMarks": "20",
+  "note": "Upload pdf file only",
+  "sampleAttachment": "",
+  "isReportApproved": true,
+  "taskStatus": 2
+}]

@@ -1,0 +1,48 @@
+{% set title = "Batches" %}
+{% set curPage = "batches" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Registration&nbsp;No</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for student in batch['students'] %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{student['regNo']}}</td>
+              <td>{{student['firstName']}} {{student['lastName']}}</td>
+              <td>{{student['gender']}}</td>
+              <td>{{student['email']}}</td>
+              <td>{{student['phoneNumber']}}</td>
+              <td>
+                <a href="/admin/delete-batch-student?bid={{batch['_id']}}&sid={{student['_id']}}"
+                  class="btn btn-sm btn-danger"
+                  onclick="return confirm('Do you want to remove this student from batch?')">Remove</a>
+              </td>
+            </tr>
+            {% endfor %}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

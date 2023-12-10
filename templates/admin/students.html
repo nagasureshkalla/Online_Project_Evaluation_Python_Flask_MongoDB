@@ -1,0 +1,54 @@
+{% set title = "Students" %}
+{% set curPage = "students" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped p-2" id="table">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Reg&nbsp;no</th>
+              <th>Department</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Batch</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in students %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{item['regNo']}}</td>
+              <td>{{item['department']['name']}}</td>
+              <td>{{item['firstName']}} {{item['lastName']}}</td>
+              <td>{{item['gender']}}</td>
+              <td>{{item['email']}}</td>
+              <td>{{item['phoneNumber']}}</td>
+              <td>
+                {{'Assigned' if item['isBatchAssigned'] else 'Not Assigned'}}
+              </td>
+              <td>
+                <a href="/admin/student/edit?sid={{item['_id']}}" class="btn btn-sm btn-info w-100 mb-1">Edit</a>
+                <a href="/admin/student/delete?sid={{item['_id']}}"
+                  onclick="return confirm('Are you sure? do you want to delete this student')"
+                  class="btn btn-sm btn-danger w-100 mb-1">Delete</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
